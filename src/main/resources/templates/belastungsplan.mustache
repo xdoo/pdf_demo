@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+
+    @page {
+        size: portrait a4;
+        margin: 20px;
+
+        @top-right {
+            content: element(logo)
+        }
+
+        @top-left {
+            content: element(left)
+        }
+
+    }
+    table, th, td {
+        border: none;
+        border-collapse: collapse;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    body {
+        font-size: small;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    h4 {
+        font-size: large;
+    }
+    h5 {
+        font-size: medium;
+    }
+    svg {
+        height: 100%;
+        width: 100%;
+    }
+    </style>
+</head>
+<body>
+    <div style="position: running(left); margin-top: 30px; width: 400px"> </div>
+    <table style="position: running(logo); margin-top: 20px;">
+        <tr>
+            <td style="width: 30%;">
+                <img
+                    src="data:image/png;base64,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"
+                ></img>
+            </td>
+            <td>
+                Landeshauptstadt<br/>
+                München<br/>
+                <b>Mobilitätsreferat</b>
+            </td>
+        </tr>
+    </table>
+    <!-- Metainformationen -->
+    <h4>{{title}}</h4>
+    <b>VZ Altstadtring</b>
+    <table>
+        <tr>
+            <td>Zähldatum: </td>
+            <td>foo</td>
+        </tr>
+        <tr>
+            <td>Zähldauer: </td>
+            <td>Kurzzeiterhebung (6 bis 10 Uhr; 15 bis 19 Uhr)</td>
+        </tr>
+        <tr>
+            <td>Platz: </td>
+            <td>Platz der Opfer des Nationalsozialismus</td>
+        </tr>
+        <tr>
+            <td>Zählsituation: </td>
+            <td>
+                Fahrbeziehung 1 nach 2 nur für Busse<br/>
+                Unfall zwischen 7.45 und 8.15 Uhr
+            </td>
+        </tr>
+        <tr>
+            <td>Wetter: </td>
+            <td>sonnig</td>
+        </tr>
+    </table>
+    <br/>
+    <h5>Tagesverkehr</h5>
+    <img src="{{chart}}"
+        style="height: 500px"
+    ></img>
+    <br/>
+    <br/>
+    <table>
+        <tr>
+            <td style="width:50%;">
+                <b>Zusatzinformationen:</b>
+            </td>
+            <td style="width:50%;">
+                Werte sind auf 100 gerundet.
+            </td>
+        </tr>
+        <tr>
+            <td>Set 2015 Baustelle im Bereich Petueltunnel. Fahrbahnerneuerung von der Belgradstraße bis zur Leopoldstraße. Tunnelsanierung des Fahrstreifen in Richtung Westen voraussichtlich im Herbst 2020 beendet.</td>
+        </tr>
+    </table>
+</body>
+</html>
