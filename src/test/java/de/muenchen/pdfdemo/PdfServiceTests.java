@@ -2,6 +2,7 @@ package de.muenchen.pdfdemo;
 
 import org.apache.commons.io.IOUtils;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 import java.io.IOException;
@@ -9,9 +10,11 @@ import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+@SpringBootTest
 public class PdfServiceTests {
 
-    private PdfService service = new PdfService();
+    @Autowired
+    private PdfService service;
 
     @Test
     public void testSimpleHtml() throws IOException {
